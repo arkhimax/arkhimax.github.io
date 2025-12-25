@@ -6,109 +6,83 @@
     <title>Arkhimax Dev | Таро Путь</title>
     <style>
         :root {
-            --primary-color: #bb86fc;
-            --secondary-color: #03dac6;
-            --bg-color: #121212;
-            --surface-color: #1e1e1e;
+            --primary: #bb86fc;
+            --secondary: #03dac6;
+            --bg: #121212;
+            --surface: #1e1e1e;
         }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
             color: #ffffff;
             margin: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             padding: 20px;
         }
-
         .container {
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
-            background: var(--surface-color);
+            background: var(--surface);
             padding: 40px 20px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
         }
-
-        h1 { color: var(--primary-color); margin-bottom: 10px; }
-        p { color: #b0b0b0; line-height: 1.6; }
-
+        h1 { color: var(--primary); margin-bottom: 10px; }
         .app-card {
-            background: rgba(187, 134, 252, 0.1);
-            border: 1px solid var(--primary-color);
+            border: 1px solid var(--primary);
             padding: 20px;
             border-radius: 15px;
-            margin: 30px 0;
+            margin: 25px 0;
+            background: rgba(187, 134, 252, 0.05);
         }
-
         .links {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-
-        /* Кнопки на ПК будут в ряд, на телефоне — в колонку */
+        /* На компьютерах кнопки будут в ряд, на телефонах — в колонку */
         @media (min-width: 480px) {
-            .links {
-                flex-direction: row;
-                justify-content: center;
-            }
+            .links { flex-direction: row; justify-content: center; }
         }
-
         a {
-            color: var(--secondary-color);
+            color: var(--secondary);
             text-decoration: none;
-            border: 2px solid var(--secondary-color);
-            padding: 12px 24px;
+            border: 2px solid var(--secondary);
+            padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 14px;
+            transition: 0.3s;
+            flex: 1; /* Чтобы кнопки были одинаковой ширины */
         }
-
         a:hover {
-            background: var(--secondary-color);
-            color: var(--bg-color);
-            box-shadow: 0 0 15px var(--secondary-color);
+            background: var(--secondary);
+            color: var(--bg);
         }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 12px;
-            color: #666;
-        }
+        .footer { margin-top: 30px; font-size: 12px; color: #666; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Arkhimax Dev</h1>
-        <p>Создаем инструменты для самопознания и духовного роста.</p>
+        <p>Создаем инструменты для самопознания.</p>
 
         <div class="app-card">
-            <h3>Наше флагманское приложение</h3>
             <h2>🔮 Таро Путь</h2>
-            <p>Ваш персональный гид по миру Арканов. Расклады, глубокие значения и ежедневные советы.</p>
-            <div class="links">
-                <a href="https://play.google.com/store/apps/details?id=com.arkhimax.taroapp">Скачать в Google Play</a>
+            <p>Ваш гид по миру Арканов уже в Google Play.</p>
+            <div style="display: flex; justify-content: center;">
+                <a href="https://play.google.com/store/apps/details?id=com.arkhimax.taroapp" style="max-width: 250px;">Скачать</a>
             </div>
         </div>
 
         <div class="links">
             <a href="privacy.html">Конфиденциальность</a>
-            <a href="mailto:vash-email@gmail.com">Связаться</a>
+            <a href="mailto:arkhipenkovadim@gmail.com">Поддержка</a>
         </div>
+        <div class="footer">© 2025 Arkhimax. Все права защищены.</div>
     </div>
-
-    <div class="footer">
-        © 2025 Arkhimax Dev. Все права защищены.
-    </div>
-
 </body>
 </html>
